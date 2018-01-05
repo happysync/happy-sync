@@ -29,7 +29,7 @@
   .el-aside {
     background-color: #D3DCE6;
     color: #333;
-    text-align: center;
+    text-align: left;
   }
 
   .el-main {

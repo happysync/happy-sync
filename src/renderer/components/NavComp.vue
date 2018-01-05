@@ -27,14 +27,22 @@
                         <el-menu-item index="1-4-1">选项1</el-menu-item>
                     </el-submenu>
                 </el-submenu>
-                <el-menu-item index="2" @select="handleSelect">
+                <el-menu-item index="/" @select="handleSelect">
                     <i class="el-icon-menu"></i>
                     <span slot="title">文件同步</span>
                 </el-menu-item>
-                <el-menu-item index="/setting" @select="handleSelect">
-                    <i class="el-icon-setting"></i>
-                    <span slot="title">参数设置</span>
-                </el-menu-item>
+                <!--<el-menu-item index="/setting" @select="handleSelect">-->
+                    <!--<i class="el-icon-setting"></i>-->
+                    <!--<span slot="title">参数设置</span>-->
+                <!--</el-menu-item>-->
+                <el-submenu index="4">
+                    <template slot="title">
+                        <i class="el-icon-setting"></i>
+                        <span>设置</span>
+                    </template>
+                    <el-menu-item index="/setting/token">云存储参数</el-menu-item>
+                    <el-menu-item index="/setting/directory">同步目录</el-menu-item>
+                </el-submenu>
             </el-menu>
         </el-col>
     </el-row>

@@ -18,16 +18,12 @@
   }
 </script>
 
-<style>
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-
+<style scoped>
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
-
-  body { font-family: 'Source Sans Pro', sans-serif; }
 
   #wrapper {
     background:
@@ -51,8 +47,6 @@
     display: flex;
     justify-content: space-between;
   }
-
-  main > div { flex-basis: 50%; }
 
   .left-side {
     display: flex;

@@ -11,7 +11,7 @@ export default new Router({
       component: require('@/components/SyncPage').default
     },
     {
-      path: '/setting',
+      path: '/setting/:path',
       name: 'setting-page',
       component: require('@/components/SettingPage').default
     },
