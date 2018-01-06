@@ -15,7 +15,10 @@
   import NavComp from './components/NavComp'
   export default {
     name: 'happy-sync',
-    components: { NavComp }
+    components: { NavComp },
+    created () {
+      // console.log(this.$store.state.Counter.main)
+    }
   }
 </script>
 

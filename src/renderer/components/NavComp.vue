@@ -48,7 +48,14 @@
     </el-row>
 </template>
 <script>
+  import { mapState } from 'vuex'
   export default {
+    computed: {
+      hahaha () {
+        return 1
+      },
+      ...mapState(['Counter'])
+    },
     methods: {
       handleOpen (key, keyPath) {
         console.log(key, keyPath)
@@ -58,6 +65,8 @@
       },
       handleSelect (index, path) {
         console.log(index, path)
+        console.log(this)
+        console.log(this.Counter)
         // this.$route.push('')
       }
     }
