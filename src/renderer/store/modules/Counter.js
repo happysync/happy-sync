@@ -18,8 +18,16 @@ const actions = {
   }
 }
 
+const getters = {
+  mainPlusOne (state) {
+    return state.main + 1
+  }
+}
+
 export default {
+  namespaced: true,
   state,
   mutations,
-  actions
+  actions,
+  getters
 }

@@ -48,13 +48,19 @@
     </el-row>
 </template>
 <script>
-  import { mapState } from 'vuex'
+  import { mapState as mapStateP, createNamespacedHelpers } from 'vuex'
+  const { mapState, mapGetters } = createNamespacedHelpers('Counter')
+  
   export default {
     computed: {
       hahaha () {
         return 1
       },
-      ...mapState(['Counter'])
+      ...mapState({
+        main: s => s.main
+      }),
+      ...mapStateP(['Counter']),
+      ...mapGetters(['mainPlusOne'])
     },
     methods: {
       handleOpen (key, keyPath) {
@@ -66,7 +72,9 @@
       handleSelect (index, path) {
         console.log(index, path)
         console.log(this)
-        console.log(this.Counter)
+        console.log(this.Counter.main)
+        console.log(this.main)
+        console.log(this.mainPlusOne)
         // this.$route.push('')
       }
     }
