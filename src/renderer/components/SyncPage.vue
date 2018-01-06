@@ -10,6 +10,9 @@
   export default {
     name: 'sync-page',
     components: { SystemInformation },
+    mounted () {
+
+    },
     methods: {
       open (link) {
         this.$electron.shell.openExternal(link)
