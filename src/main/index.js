@@ -1,6 +1,8 @@
 'use strict'
 
 import { app, BrowserWindow } from 'electron'
+// const path = require('path')
+// const glob = require('glob')
 
 /**
  * Set `__static` path to static files in production
@@ -30,6 +32,8 @@ function createWindow () {
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+
+  loadComponents()
 }
 
 app.on('ready', createWindow)
@@ -65,3 +69,9 @@ app.on('ready', () => {
   if (process.env.NODE_ENV === 'production') autoUpdater.checkForUpdates()
 })
  */
+
+// Require each JS file in the components dir, with webpack
+function loadComponents () {
+  function requireAll (r) { r.keys().forEach(r) }
+  requireAll(require.context('./components/', true, /\.js$/))
+}
