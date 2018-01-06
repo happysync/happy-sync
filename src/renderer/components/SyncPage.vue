@@ -6,12 +6,29 @@
 
 <script>
   import SystemInformation from './SyncPage/SystemInformation'
-
+  import { mapState } from 'vuex'
+  var glob = require('glob')
   export default {
     name: 'sync-page',
     components: { SystemInformation },
+    computed: {
+      ...mapState({
+        directory: state => state.Setting.directory
+      })
+    },
+    watch: {
+      directory () {
+        console.log('directory changed')
+      }
+    },
     mounted () {
-
+      console.log(this.directory)
+      if (this.directory) {
+        // options is optional
+        glob(this.directory + '/*', function (er, files) {
+          console.log(files)
+        })
+      }
     },
     methods: {
       open (link) {

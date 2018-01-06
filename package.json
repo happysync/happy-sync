@@ -60,6 +60,7 @@
     "axios": "^0.16.1",
     "chokidar": "^2.0.0",
     "element-ui": "^2.0.10",
+    "glob": "^7.1.2",
     "minireset.css": "0.0.3",
     "moment": "^2.20.1",
     "vue": "^2.3.3",
