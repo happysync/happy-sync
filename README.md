@@ -1,6 +1,18 @@
-# happy-sync
+# happy-sync (under development)
 
 > A file sync client
+
+#### Intro  
+A file sync client based on Electron & Vue.js.  
+Choose your cloud storage provider,    
+sync your files to cloud. 
+
+#### Supported cloud storage providers  
+[Qiniu](http://qiniu.com)  
+> The support of Tencent Cloud/Alibaba Cloud is in consideration  
+
+#### Chat room
+https://gitter.im/happysync/happy-sync  
 
 #### Build Setup
 
