@@ -25,8 +25,14 @@
       console.log(this.directory)
       if (this.directory) {
         // options is optional
-        glob(this.directory + '/*', function (er, files) {
-          console.log(files)
+        glob(this.directory + '/**/', function (er, files) {
+          console.log('all dir ===', files)
+        })
+        glob(this.directory + '/**/*', {dot: true}, function (er, files) {
+          console.log('all files ===', files)
+        })
+        glob(this.directory + '/*', {dot: true, nodir: true}, function (er, files) {
+          console.log('current folder files, no dir ===', files)
         })
       }
     },
