@@ -5,6 +5,18 @@ var chokidar = require('chokidar')
 var moment = require('moment')
 var watcher
 
+var request = require('request')
+
+request({
+  method: 'HEAD',
+  uri: 'https://www.baidu.com/nocache/fesplg/time.gif'
+}, function (error, response, body) {
+  // body is the decompressed response body
+  console.log('time is ' + moment(response.headers['date']).format('YYYY-MM-DD-HH-mm-ss'))
+  // console.log('the decoded data is: ' + body)
+  console.log(error)
+})
+
 ipc.on('open-file-dialog', function (event) {
   console.log('nodejs require OK')
   dialog.showOpenDialog({
